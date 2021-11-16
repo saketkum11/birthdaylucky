@@ -15,7 +15,7 @@ body {
 button {
   padding: 0.2rem 2rem;
   background-color: var(--primary-color);
-  color: var(--tretary-color);
+  color: var(--secondary-color);
   border-radius: 0.5rem;
   border: 3px solid var(--secondary-color);
 }
