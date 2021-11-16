@@ -24,6 +24,11 @@ export default function App() {
     if (birthdate !== "" && lucky !== "") {
       if (lucky > 0) {
         var birth = calculateBirth(birthdate);
+        if (birth % lucky === 0) {
+          setDisplay("Yeah! Your birthdate is  lucky");
+        } else {
+          setDisplay("Sorry! your birthdate is not lucky");
+        }
       } else {
         setDisplay("Enter positive value");
       }
