@@ -2,3 +2,30 @@
   font-family: sans-serif;
   text-align: center;
 }
+body {
+  background-color: var(--primary-color);
+
+  margin: 0 auto;
+}
+:root {
+  --primary-color: #1d1e18;
+  --secondary-color: #fca311;
+  --tretary-color: white;
+}
+button {
+  padding: 0.2rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--tretary-color);
+  border-radius: 0.5rem;
+  border: 3px solid var(--secondary-color);
+}
+h1,
+label {
+  color: var(--secondary-color);
+}
+input {
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-color);
+  color: var(--tretary-color);
+}

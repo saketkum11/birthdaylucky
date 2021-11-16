@@ -35,11 +35,6 @@ export default function App() {
     } else {
       setDisplay("Enter value");
     }
-
-    setTimeout(() => {
-      setLuckyNumber(birth);
-      console.log(birth);
-    }, 1000);
   }
   return (
     <div className="App">
@@ -51,27 +46,13 @@ export default function App() {
         type="date"
         onChange={birthdayHandler}
       ></input>
-      <label style={{ display: "block" }}>Lucky Number</label>
+      <label>Lucky Number</label>
       <input
+        style={{ textAlign: "center" }}
         type="number"
-        style={{
-          textAlign: "center",
-          borderRadius: "0.5rem",
-          backgroundColor: ""
-        }}
         onChange={luckyHandler}
       ></input>
-      <button
-        style={{
-          padding: "0.2rem 0.3rem",
-          background: "purple",
-          color: "white",
-          border: "2px solid white"
-        }}
-        onClick={submitHandler}
-      >
-        Sumbit
-      </button>
+      <button onClick={submitHandler}>Submit</button>
 
       <h1>{display}</h1>
     </div>
