@@ -54,10 +54,22 @@ export default function App() {
       <label style={{ display: "block" }}>Lucky Number</label>
       <input
         type="number"
-        style={{ textAlign: "center" }}
+        style={{
+          textAlign: "center",
+          borderRadius: "0.5rem",
+          backgroundColor: ""
+        }}
         onChange={luckyHandler}
       ></input>
-      <button style={{ display: "block" }} onClick={submitHandler}>
+      <button
+        style={{
+          padding: "0.2rem 0.3rem",
+          background: "purple",
+          color: "white",
+          border: "2px solid white"
+        }}
+        onClick={submitHandler}
+      >
         Sumbit
       </button>
 
