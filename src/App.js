@@ -27,6 +27,8 @@ export default function App() {
       } else {
         setDisplay("Enter positive value");
       }
+    } else {
+      setDisplay("Enter value");
     }
 
     setTimeout(() => {
