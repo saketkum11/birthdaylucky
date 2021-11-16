@@ -4,6 +4,7 @@ import React, { useState } from "react";
 export default function App() {
   var [birthdate, setBirthDate] = useState("");
   var [lucky, setLuckyNumber] = useState(0);
+  var [display, setDisplay] = useState("");
   function birthdayHandler(event) {
     setBirthDate(event.target.value);
   }
@@ -20,7 +21,13 @@ export default function App() {
     return sum;
   }
   function submitHandler() {
-    var birth = calculateBirth(birthdate);
+    if (birthdate !== "" && lucky !== "") {
+      if (lucky > 0) {
+        var birth = calculateBirth(birthdate);
+      } else {
+        setDisplay("Enter positive value");
+      }
+    }
 
     setTimeout(() => {
       setLuckyNumber(birth);
@@ -46,8 +53,8 @@ export default function App() {
       <button style={{ display: "block" }} onClick={submitHandler}>
         Sumbit
       </button>
-      <h1>{birthdate}</h1>
-      <h1>{lucky}</h1>
+
+      <h1>{display}</h1>
     </div>
   );
 }
